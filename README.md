@@ -32,3 +32,5 @@ Spring Cloud Kubernetes requires access to Kubernetes API in order to be able to
 -   **admin-service**  - a module persist the data of Movie Booking System and allows to perform CRUD operations. Consist all the business logic required in order to perform new booking.
 -   **booking-service**  - a module responsible for New Booking Request. It communicates with admin-service.
 -   **config-service**  - Not Implemented Yet but definitely a separate module containing embedded Spring Boot Admin Server used for monitoring Spring Boot microservices running on Kubernetes
+
+Note : Due to time constraints certain limitations are still there in the application and further optimization of implementation can be very well done during production grade adaptation of the  implementation.
