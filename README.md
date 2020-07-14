@@ -33,4 +33,6 @@ Spring Cloud Kubernetes requires access to Kubernetes API in order to be able to
 -   **booking-service**  - a module responsible for New Booking Request. It communicates with admin-service.
 -   **config-service**  - Not Implemented Yet but definitely a separate module containing embedded Spring Boot Admin Server used for monitoring Spring Boot microservices running on Kubernetes
 
-Note : Due to time constraints certain limitations are still there in the application and further optimization of implementation can be very well done during production grade adaptation of the  implementation.
+Note : Due to time constraints certain limitations are still there in the application and further optimization of implementation can be very well done during production grade adaptation of the  implementation. Another github link of the same project but without Spring-Cloud-Kubernetes https://github.com/jasgeetsingh/movie-booking-system
+
+
