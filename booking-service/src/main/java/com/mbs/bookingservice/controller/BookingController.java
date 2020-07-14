@@ -1,8 +1,8 @@
 package com.mbs.bookingservice.controller;
 
 
+import com.mbs.bookingservice.client.BookingClient;
 import com.mbs.bookingservice.model.BookingDao;
-import com.mbs.bookingservice.service.AdminServiceExchangeProxy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,18 +15,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/bookings")
+//@RequestMapping(value = "/bookings")
 public class BookingController {
 
      Logger logger = LoggerFactory.getLogger(this.getClass());
 
      @Autowired
-     AdminServiceExchangeProxy adminServiceExchange;
+     BookingClient bookingClient;
 
-    @PostMapping("/new")
+    @PostMapping("/booking/new")
     public BookingDao addNewBooking(@RequestBody BookingDao bookingDao) {
         logger.info("Reach here BookingController Booking Service");
-        return adminServiceExchange.requestBooking(bookingDao);
+        return bookingClient.newBookingRequest(bookingDao);
     }
 
 

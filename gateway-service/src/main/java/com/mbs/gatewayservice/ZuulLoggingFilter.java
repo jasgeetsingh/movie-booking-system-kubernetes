@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
-@Component
+//@Component
 public class ZuulLoggingFilter extends ZuulFilter {
 
     Logger logger = LoggerFactory.getLogger(this.getClass());

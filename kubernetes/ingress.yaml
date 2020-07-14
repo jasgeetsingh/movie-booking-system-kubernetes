@@ -15,7 +15,7 @@ spec:
       - path: /booking
         backend:
           serviceName: booking
-          servicePort: 8080
+          servicePort: 8090
       - path: /admin
         backend:
           serviceName: admin

@@ -15,22 +15,24 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/bookings")
-public class BookingController {
+@RequestMapping(value = "/admin")
+public class AdminController {
 
     @Autowired
     BookingService bookingService;
 
      Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @GetMapping("/all")
+    @GetMapping("/booking/all")
     public List<Booking> getAllBookings() {
         return bookingService.getAllBookings();
     }
 
-    @PostMapping("/add")
+    @PostMapping("/booking/add")
     public ResponseEntity<?> addNewBooking(@RequestBody BookingDao bookingDao) throws HouseFullException {
 
         return ResponseEntity.status(HttpStatus.OK).body(bookingService.newBooking(bookingDao));
     }
+
+
 }
