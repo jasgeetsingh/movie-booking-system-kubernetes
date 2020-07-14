@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gateway-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: default-http-backend
+    servicePort: 80
+  rules:
+  - host: microservices.info
+    http:
+      paths:
+      - path: /booking
+        backend:
+          serviceName: booking
+          servicePort: 8080
+      - path: /admin
+        backend:
+          serviceName: admin
+          servicePort: 8080
